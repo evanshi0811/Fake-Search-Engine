@@ -5,6 +5,15 @@ document.addEventListener("submit", function(event) {
     }
 });
 
+document.querySelector("#search").addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        if (document.querySelector("#search").value != "") {
+            window.location.href = url(document.querySelector("#search").value);
+        }
+    }
+});
+
 function url(search) {
     console.log();
     if (document.querySelector("#google").checked) {
