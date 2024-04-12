@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "css/html5reset.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
     <title>(Fake) Search Engine</title>
 </head>
 <body>
-    <form>
-        <h1><label for="search">(Fake) Search Engine</label></h1>
-        <textarea id="search" name="search" placeholder="Search Here"></textarea>
-        <input type="submit" value="Search">
-    </form>
-    <form>
-        <input type="radio" id="google" name="search_engine" value="Google" checked>
-        <label for="Google">Google</label><br>
-        <input type="radio" id="bing" name="search_engine" value="Bing">
-        <label for="Bing">Bing</label><br>
-        <input type="radio" id="youtube" name="search_engine" value="Youtube">
-        <label for="Youtube">Youtube</label>
-        <input type="radio" id="yahoo" name="search_engine" value="Yahoo">
-        <label for="Yahoo">Yahoo</label>
-        <input type="radio" id="yandex" name="search_engine" value="Yandex">
-        <label for="Yandex">Yandex</label>
-        <input type="radio" id="duckduckgo" name="search_engine" value="DuckDuckGo">
-        <label for="DuckDuckGo">DuckDuckGo</label>
-        <input type="radio" id="baidu" name="search_engine" value="Baidu">
-        <label for="Baidu">Baidu</label>
-        <input type="radio" id="ecosia" name="search_engine" value="Ecosia">
-        <label for="Ecosia">Ecosia</label>
-    </form>
+    <main id = "primary-grid">
+        <h1>(Fake) Search Engine</h1>
+        <form>
+            <textarea id="search" name="search" rows="1" placeholder="Search Here"></textarea>
+            <input id = "search-button" type="submit" value="Search">
+        </form>
+        <form>
+            <h2>Select Search Engine:</h2>
+            <input type="radio" id="google" name="search_engine" value="Google" checked>
+            <label for="google">Google</label><br>
+            <input type="radio" id="bing" name="search_engine" value="Bing">
+            <label for="bing">Bing</label><br>
+            <input type="radio" id="youtube" name="search_engine" value="Youtube">
+            <label for="youtube">Youtube</label><br>
+            <input type="radio" id="yahoo" name="search_engine" value="Yahoo">
+            <label for="yahoo">Yahoo</label><br>
+            <input type="radio" id="yandex" name="search_engine" value="Yandex">
+            <label for="yandex">Yandex</label><br>
+            <input type="radio" id="duckduckgo" name="search_engine" value="DuckDuckGo">
+            <label for="duckduckgo">DuckDuckGo</label><br>
+            <input type="radio" id="baidu" name="search_engine" value="Baidu">
+            <label for="baidu">Baidu</label><br>
+            <input type="radio" id="ecosia" name="search_engine" value="Ecosia">
+            <label for="ecosia">Ecosia</label>
+        </form>
+        <div>
+            <a href=""></a>
+            <button id="editdelete1"  aria-pressed="false">
+                <!--<img src = "images/editdelete.png" alt = "">-->
+            </button>
+        </div>
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>

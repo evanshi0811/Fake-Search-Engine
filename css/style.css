@@ -1,0 +1,28 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 140px auto 0 auto;
+}
+
+#primary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+#search {
+    width: max(80vw, 320px);
+    margin: 20px auto 0 auto;
+    display: block;
+    border-radius: 8px;
+}
+
+#search-button {
+    width: 80px;
+    margin: 10px auto 0 auto;
+    display: block;
+    border-radius: 8px;
+}
