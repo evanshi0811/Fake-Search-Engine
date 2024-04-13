@@ -2,7 +2,7 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: black;
+    border-radius: 8px;
 }
 
 button {
@@ -10,6 +10,8 @@ button {
     -moz-appearance: none;
     appearance: none;
     color: black;
+    background-color: white;
+    border: 1px black #000;
 }
 
 body {
