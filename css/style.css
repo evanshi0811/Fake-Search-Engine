@@ -47,6 +47,9 @@ h1 {
     display: block;
     border-radius: 8px;
     font-size: 18px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #000;
 }
 
 .link-container {
