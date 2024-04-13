@@ -9,6 +9,7 @@
 </head>
 <body>
     <main>
+        <button id = "settings-button" aria-label="Settings Button"><img src = "images/settings-icon-1964x2048-8nigtrtt.png" alt = ""></button>
         <div id = "primary-grid">
             <label for="search">
                 <h1>(Fake) Search Engine</h1>
@@ -43,25 +44,41 @@
                     <button class = "edit-button" id = "eb6" aria-label="Edit Shortcut 6"><img src = "images/editdelete.png" alt = ""></button>
                 </div>
             </div>
-            <form id = "search-form">
-                <h2>Select Search Engine:</h2>
-                <input type = "radio" id = "google" name = "search_engine" value = "Google">
-                <label for = "google">Google</label><br>
-                <input type = "radio" id = "bing" name = "search_engine" value = "Bing">
-                <label for = "bing">Bing</label><br>
-                <input type = "radio" id = "youtube" name = "search_engine" value = "Youtube">
-                <label for = "youtube">Youtube</label><br>
-                <input type = "radio" id = "yahoo" name = "search_engine" value = "Yahoo">
-                <label for = "yahoo">Yahoo</label><br>
-                <input type = "radio" id = "yandex" name = "search_engine" value = "Yandex">
-                <label for = "yandex">Yandex</label><br>
-                <input type = "radio" id = "duckduckgo" name = "search_engine" value = "DuckDuckGo">
-                <label for = "duckduckgo">DuckDuckGo</label><br>
-                <input type = "radio" id = "baidu" name = "search_engine" value = "Baidu">
-                <label for = "baidu">Baidu</label><br>
-                <input type = "radio" id = "ecosia" name = "search_engine" value = "Ecosia">
-                <label for = "ecosia">Ecosia</label>
-            </form>
+            <div>
+                <h2 id = "history-text">Search History:</h2>
+                <div>
+                    <p id = "time1"></p><button class = "history-button" id = "h1" aria-label="History 1"></button>
+                    <p id = "time2"></p><button class = "history-button" id = "h2" aria-label="History 2"></button>
+                    <p id = "time3"></p><button class = "history-button" id = "h3" aria-label="History 3"></button>
+                    <p id = "time4"></p><button class = "history-button" id = "h4" aria-label="History 4"></button>
+                    <p id = "time5"></p><button class = "history-button" id = "h5" aria-label="History 5"></button>
+                    <p id = "time6"></p><button class = "history-button" id = "h6" aria-label="History 6"></button>
+                    <p id = "time7"></p><button class = "history-button" id = "h7" aria-label="History 7"></button>
+                    <p id = "time8"></p><button class = "history-button" id = "h8" aria-label="History 8"></button>
+                </div>
+            </div>
+        </div>
+        <div id = "search-form" class = "popup">
+            <button class = "x" id = "settingx" aria-label="Close Settings Window"><img src = "images/close-512.webp" alt = ""></button>
+            <h2>Settings:</h2><br>
+            <h3>Select Search Engine:</h3>
+            <input type = "radio" id = "google" name = "search_engine" value = "Google">
+            <label for = "google">Google</label><br>
+            <input type = "radio" id = "bing" name = "search_engine" value = "Bing">
+            <label for = "bing">Bing</label><br>
+            <input type = "radio" id = "youtube" name = "search_engine" value = "Youtube">
+            <label for = "youtube">Youtube</label><br>
+            <input type = "radio" id = "yahoo" name = "search_engine" value = "Yahoo">
+            <label for = "yahoo">Yahoo</label><br>
+            <input type = "radio" id = "yandex" name = "search_engine" value = "Yandex">
+            <label for = "yandex">Yandex</label><br>
+            <input type = "radio" id = "duckduckgo" name = "search_engine" value = "DuckDuckGo">
+            <label for = "duckduckgo">DuckDuckGo</label><br>
+            <input type = "radio" id = "baidu" name = "search_engine" value = "Baidu">
+            <label for = "baidu">Baidu</label><br>
+            <input type = "radio" id = "ecosia" name = "search_engine" value = "Ecosia">
+            <label for = "ecosia">Ecosia</label>
+            <button id = "clear" aria-label="Clear History">Clear History</button>
         </div>
         <div id = "popup1" class = "popup">
             <button class = "x" id = "x1" aria-label="Close Shortcut Edit Window"><img src = "images/close-512.webp" alt = ""></button><br>

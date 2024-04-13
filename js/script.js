@@ -26,6 +26,15 @@ let history5 = "";
 let history6 = "";
 let history7 = "";
 let history8 = "";
+let date1 = "";
+let date2 = "";
+let date3 = "";
+let date4 = "";
+let date5 = "";
+let date6 = "";
+let date7 = "";
+let date8 = "";
+let settings = false;
 let popup1 = false;
 let popup2 = false;
 let popup3 = false;
@@ -33,7 +42,106 @@ let popup4 = false;
 let popup5 = false;
 let popup6 = false;
 
-//COOKIE STUFF HERE
+if (document.cookie != "") {
+    search_engine = getCookie("search_engine");
+    name1 = getCookie("name1");
+    name2 = getCookie("name2");
+    name3 = getCookie("name3");
+    name4 = getCookie("name4");
+    name5 = getCookie("name5");
+    name6 = getCookie("name6");
+    ls1 = getCookie("ls1");
+    ls2 = getCookie("ls2");
+    ls3 = getCookie("ls3");
+    ls4 = getCookie("ls4");
+    ls5 = getCookie("ls5");
+    ls6 = getCookie("ls6");
+    type1 = getCookie("type1");
+    type2 = getCookie("type2");
+    type3 = getCookie("type3");
+    type4 = getCookie("type4");
+    type5 = getCookie("type5");
+    type6 = getCookie("type6");
+    history1 = getCookie("history1");
+    history2 = getCookie("history2");
+    history3 = getCookie("history3");
+    history4 = getCookie("history4");
+    history5 = getCookie("history5");
+    history6 = getCookie("history6");
+    history7 = getCookie("history7");
+    history8 = getCookie("history8");
+    date1 = getCookie("date1");
+    date2 = getCookie("date2");
+    date3 = getCookie("date3");
+    date4 = getCookie("date4");
+    date5 = getCookie("date5");
+    date6 = getCookie("date6");
+    date7 = getCookie("date7");
+    date8 = getCookie("date8");
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
+}
+
+// Set cookies for each variable
+function setCookies() {
+    setCookie("search_engine", search_engine, 30);
+    setCookie("name1", name1, 30);
+    setCookie("name2", name2, 30);
+    setCookie("name3", name3, 30);
+    setCookie("name4", name4, 30);
+    setCookie("name5", name5, 30);
+    setCookie("name6", name6, 30);
+    setCookie("ls1", ls1, 30);
+    setCookie("ls2", ls2, 30);
+    setCookie("ls3", ls3, 30);
+    setCookie("ls4", ls4, 30);
+    setCookie("ls5", ls5, 30);
+    setCookie("ls6", ls6, 30);
+    setCookie("type1", type1, 30);
+    setCookie("type2", type2, 30);
+    setCookie("type3", type3, 30);
+    setCookie("type4", type4, 30);
+    setCookie("type5", type5, 30);
+    setCookie("type6", type6, 30);
+    setCookie("history1", history1, 30);
+    setCookie("history2", history2, 30);
+    setCookie("history3", history3, 30);
+    setCookie("history4", history4, 30);
+    setCookie("history5", history5, 30);
+    setCookie("history6", history6, 30);
+    setCookie("history7", history7, 30);
+    setCookie("history8", history8, 30);
+    setCookie("date1", date1, 30);
+    setCookie("date2", date2, 30);
+    setCookie("date3", date3, 30);
+    setCookie("date4", date4, 30);
+    setCookie("date5", date5, 30);
+    setCookie("date6", date6, 30);
+    setCookie("date7", date7, 30);
+    setCookie("date8", date8, 30);
+}
+
 
 //set webpage with appropriate variables
 window.addEventListener("load", set());
@@ -105,6 +213,90 @@ function set() {
     } else if (type6 == "search") {
         document.querySelector("#search6").checked = true;
     }
+    if (history1 == "") {
+        document.querySelector("#history-text").classList.add("hidden");
+        document.querySelector("#time1").classList.add("hidden");
+        document.querySelector("#h1").classList.add("hidden");
+    } else {
+        document.querySelector("#history-text").classList.remove("hidden");
+        document.querySelector("#time1").classList.remove("hidden");
+        document.querySelector("#h1").classList.remove("hidden");
+        document.querySelector("#time1").innerHTML = date1.substring(4, 21) + ":";
+        document.querySelector("#h1").innerHTML = history1;
+    }
+    if (history1 == "") {
+        document.querySelector("#time1").classList.add("hidden");
+        document.querySelector("#h1").classList.add("hidden");
+    } else {
+        document.querySelector("#time1").classList.remove("hidden");
+        document.querySelector("#h1").classList.remove("hidden");
+        document.querySelector("#time1").innerHTML = date1.substring(4, 21) + ":";
+        document.querySelector("#h1").innerHTML = history1;
+    }
+    if (history2 == "") {
+        document.querySelector("#time2").classList.add("hidden");
+        document.querySelector("#h2").classList.add("hidden");
+    } else {
+        document.querySelector("#time2").classList.remove("hidden");
+        document.querySelector("#h2").classList.remove("hidden");
+        document.querySelector("#time2").innerHTML = date2.substring(4, 21) + ":";
+        document.querySelector("#h2").innerHTML = history2;
+    }
+    if (history3 == "") {
+        document.querySelector("#time3").classList.add("hidden");
+        document.querySelector("#h3").classList.add("hidden");
+    } else {
+        document.querySelector("#time3").classList.remove("hidden");
+        document.querySelector("#h3").classList.remove("hidden");
+        document.querySelector("#time3").innerHTML = date3.substring(4, 21) + ":";
+        document.querySelector("#h3").innerHTML = history3;
+    }
+    if (history4 == "") {
+        document.querySelector("#time4").classList.add("hidden");
+        document.querySelector("#h4").classList.add("hidden");
+    } else {
+        document.querySelector("#time4").classList.remove("hidden");
+        document.querySelector("#h4").classList.remove("hidden");
+        document.querySelector("#time4").innerHTML = date4.substring(4, 21) + ":";
+        document.querySelector("#h4").innerHTML = history4;
+    }
+    if (history5 == "") {
+        document.querySelector("#time5").classList.add("hidden");
+        document.querySelector("#h5").classList.add("hidden");
+    } else {
+        document.querySelector("#time5").classList.remove("hidden");
+        document.querySelector("#h5").classList.remove("hidden");
+        document.querySelector("#time5").innerHTML = date5.substring(4, 21) + ":";
+        document.querySelector("#h5").innerHTML = history5;
+    }
+    if (history6 == "") {
+        document.querySelector("#time6").classList.add("hidden");
+        document.querySelector("#h6").classList.add("hidden");
+    } else {
+        document.querySelector("#time6").classList.remove("hidden");
+        document.querySelector("#h6").classList.remove("hidden");
+        document.querySelector("#time6").innerHTML = date6.substring(4, 21) + ":";
+        document.querySelector("#h6").innerHTML = history6;
+    }
+    if (history7 == "") {
+        document.querySelector("#time7").classList.add("hidden");
+        document.querySelector("#h7").classList.add("hidden");
+    } else {
+        document.querySelector("#time7").classList.remove("hidden");
+        document.querySelector("#h7").classList.remove("hidden");
+        document.querySelector("#time7").innerHTML = date7.substring(4, 21) + ":";
+        document.querySelector("#h7").innerHTML = history7;
+    }
+    if (history8 == "") {
+        document.querySelector("#time8").classList.add("hidden");
+        document.querySelector("#h8").classList.add("hidden");
+    } else {
+        document.querySelector("#time8").classList.remove("hidden");
+        document.querySelector("#h8").classList.remove("hidden");
+        document.querySelector("#time8").innerHTML = date8.substring(4, 21) + ":";
+        document.querySelector("#h8").innerHTML = history8;
+    }
+    setCookies();
 }
 
 function emptycheck() {
@@ -147,9 +339,26 @@ function emptycheck() {
 }
 
 //Search Stuff
-document.addEventListener("submit", function(event) {
+document.querySelector("#search-button").addEventListener("click", function(event) {
     event.preventDefault();
     if (document.querySelector("#search").value != "") {
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = document.querySelector("#search").value;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        setCookies();
         window.location.href = url(document.querySelector("#search").value);
     }
 });
@@ -158,9 +367,51 @@ document.querySelector("#search").addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
         if (document.querySelector("#search").value != "") {
+            history8 = history7;
+            history7 = history6;
+            history6 = history5;
+            history5 = history4;
+            history4 = history3;
+            history3 = history2;
+            history2 = history1;
+            history1 = document.querySelector("#search").value;
+            date8 = date7;
+            date7 = date6;
+            date6 = date5;
+            date5 = date4;
+            date4 = date3;
+            date3 = date2;
+            date2 = date1;
+            date1 = Date();
+            setCookies();
             window.location.href = url(document.querySelector("#search").value);
         }
     }
+});
+
+document.querySelector("#h1").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = url(history1);
+});
+document.querySelector("#h2").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = url(history2);
+});
+document.querySelector("#h3").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = url(history3);
+});
+document.querySelector("#h4").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = url(history4);
+});
+document.querySelector("#h5").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = url(history5);
+});
+document.querySelector("#h6").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = url(history6);
 });
 
 function url(search) {
@@ -203,6 +454,18 @@ document.querySelector("#search-form").addEventListener('change', function() {
     }
 });
 
+document.querySelector("#settings-button").addEventListener('click', function(event) {
+    document.querySelector("#search-form").classList.add("open-settings");
+    settings = true;
+    event.stopPropagation();
+});
+
+document.querySelector("#settingx").addEventListener('click', function(event) {
+    document.querySelector("#search-form").classList.remove("open-settings");
+    settings = false;
+    set();
+    event.stopPropagation();
+});
 
 //Shortcut Stuff
 window.addEventListener('click', function(event) {
@@ -235,6 +498,11 @@ window.addEventListener('click', function(event) {
         event.preventDefault();
         document.querySelector("#popup6").classList.remove("popup-clicked");
         popup6 = false;
+        set();
+    } else if (!document.querySelector("#search-form").contains(event.target) && settings) {
+        event.preventDefault();
+        document.querySelector("#search-form").classList.remove("open-settings");
+        settings = false;
         set();
     }
 });
@@ -556,4 +824,24 @@ document.querySelector("#delete6").addEventListener('click', function(event) {
     popup6 = false;
     set();
     event.stopPropagation();
+});
+
+document.querySelector("#clear").addEventListener('click', function() {
+    history1 = "";
+    history2 = "";
+    history3 = "";
+    history4 = "";
+    history5 = "";
+    history6 = "";
+    history7 = "";
+    history8 = "";
+    date1 = "";
+    date2 = "";
+    date3 = "";
+    date4 = "";
+    date5 = "";
+    date6 = "";
+    date7 = "";
+    date8 = "";
+    set();
 });
