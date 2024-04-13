@@ -183,6 +183,26 @@ function url(search) {
     }
 }
 
+document.querySelector("#search-form").addEventListener('change', function() {
+    if (document.querySelector("#google").checked) {
+        search_engine = "Google";
+    } else if (document.querySelector("#bing").checked) {
+        search_engine = "Bing";
+    } else if (document.querySelector("#youtube").checked) {
+        search_engine = "Youtube";
+    } else if (document.querySelector("#yahoo").checked) {
+        search_engine = "Yahoo";
+    } else if (document.querySelector("#yandex").checked) {
+        search_engine = "Yandex";
+    } else if (document.querySelector("#duckduckgo").checked) {
+        search_engine = "DuckDuckGo";
+    } else if (document.querySelector("#baidu").checked) {
+        search_engine = "Baidu";
+    } else if (document.querySelector("#ecosia").checked) {
+        search_engine = "Ecosia";
+    }
+});
+
 
 //Shortcut Stuff
 window.addEventListener('click', function(event) {
@@ -190,26 +210,32 @@ window.addEventListener('click', function(event) {
         event.preventDefault();
         document.querySelector("#popup1").classList.remove("popup-clicked");
         popup1 = false;
+        set();
     } else if (!document.querySelector("#popup2").contains(event.target) && popup2) {
         event.preventDefault();
         document.querySelector("#popup2").classList.remove("popup-clicked");
         popup2 = false;
+        set();
     } else if (!document.querySelector("#popup3").contains(event.target) && popup3) {
         event.preventDefault();
         document.querySelector("#popup3").classList.remove("popup-clicked");
         popup3 = false;
+        set();
     } else if (!document.querySelector("#popup4").contains(event.target) && popup4) {
         event.preventDefault();
         document.querySelector("#popup4").classList.remove("popup-clicked");
         popup4 = false;
+        set();
     } else if (!document.querySelector("#popup5").contains(event.target) && popup5) {
         event.preventDefault();
         document.querySelector("#popup5").classList.remove("popup-clicked");
         popup5 = false;
+        set();
     } else if (!document.querySelector("#popup6").contains(event.target) && popup6) {
         event.preventDefault();
         document.querySelector("#popup6").classList.remove("popup-clicked");
         popup6 = false;
+        set();
     }
 });
 
@@ -222,6 +248,7 @@ document.querySelector("#eb1").addEventListener('click', function(event) {
 document.querySelector("#x1").addEventListener('click', function(event) {
     document.querySelector("#popup1").classList.remove("popup-clicked");
     popup1 = false;
+    set();
     event.stopPropagation();
 });
 
@@ -234,6 +261,7 @@ document.querySelector("#eb2").addEventListener('click', function(event) {
 document.querySelector("#x2").addEventListener('click', function(event) {
     document.querySelector("#popup2").classList.remove("popup-clicked");
     popup2 = false;
+    set();
     event.stopPropagation();
 });
 
@@ -246,6 +274,7 @@ document.querySelector("#eb3").addEventListener('click', function(event) {
 document.querySelector("#x3").addEventListener('click', function(event) {
     document.querySelector("#popup3").classList.remove("popup-clicked");
     popup3 = false;
+    set();
     event.stopPropagation();
 });
 
@@ -258,6 +287,7 @@ document.querySelector("#eb4").addEventListener('click', function(event) {
 document.querySelector("#x4").addEventListener('click', function(event) {
     document.querySelector("#popup4").classList.remove("popup-clicked");
     popup4 = false;
+    set();
     event.stopPropagation();
 });
 
@@ -270,6 +300,7 @@ document.querySelector("#eb5").addEventListener('click', function(event) {
 document.querySelector("#x5").addEventListener('click', function(event) {
     document.querySelector("#popup5").classList.remove("popup-clicked");
     popup5 = false;
+    set();
     event.stopPropagation();
 });
 
@@ -282,6 +313,7 @@ document.querySelector("#eb6").addEventListener('click', function(event) {
 document.querySelector("#x6").addEventListener('click', function(event) {
     document.querySelector("#popup6").classList.remove("popup-clicked");
     popup6 = false;
+    set();
     event.stopPropagation();
 });
 
@@ -356,4 +388,172 @@ document.querySelector("#lb6").addEventListener('click', function(event) {
             window.location.href = url(ls6);
         }
     }
+});
+
+document.querySelector("#save1").addEventListener('click', function(event) {
+    if (document.querySelector("#name1").value == "" || document.querySelector("#ls1").value == "") {
+        alert("Please fill Shortcut Name and URL/Search before saving.");
+    } else {
+        name1 = document.querySelector("#name1").value;
+        ls1 = document.querySelector("#ls1").value;
+        if (document.querySelector("#link1").checked) {
+            type1 = "link";
+        } else if (document.querySelector("#search1").checked) {
+            type1 = "search";
+        }
+        document.querySelector("#popup1").classList.remove("popup-clicked");
+        popup1 = false;
+        set();
+        event.stopPropagation();
+    }
+});
+
+document.querySelector("#save2").addEventListener('click', function(event) {
+    if (document.querySelector("#name2").value == "" || document.querySelector("#ls2").value == "") {
+        alert("Please fill Shortcut Name and URL/Search before saving.");
+    } else {
+        name2 = document.querySelector("#name2").value;
+        ls2 = document.querySelector("#ls2").value;
+        if (document.querySelector("#link2").checked) {
+            type2 = "link";
+        } else if (document.querySelector("#search2").checked) {
+            type2 = "search";
+        }
+        document.querySelector("#popup2").classList.remove("popup-clicked");
+        popup2 = false;
+        set();
+        event.stopPropagation();
+    }
+});
+
+document.querySelector("#save3").addEventListener('click', function(event) {
+    if (document.querySelector("#name3").value == "" || document.querySelector("#ls3").value == "") {
+        alert("Please fill Shortcut Name and URL/Search before saving.");
+    } else {
+        name3 = document.querySelector("#name3").value;
+        ls3 = document.querySelector("#ls3").value;
+        if (document.querySelector("#link3").checked) {
+            type3 = "link";
+        } else if (document.querySelector("#search3").checked) {
+            type3 = "search";
+        }
+        document.querySelector("#popup3").classList.remove("popup-clicked");
+        popup3 = false;
+        set();
+        event.stopPropagation();
+    }
+});
+
+document.querySelector("#save4").addEventListener('click', function(event) {
+    if (document.querySelector("#name4").value == "" || document.querySelector("#ls4").value == "") {
+        alert("Please fill Shortcut Name and URL/Search before saving.");
+    } else {
+        name4 = document.querySelector("#name4").value;
+        ls4 = document.querySelector("#ls4").value;
+        if (document.querySelector("#link4").checked) {
+            type4 = "link";
+        } else if (document.querySelector("#search4").checked) {
+            type4 = "search";
+        }
+        document.querySelector("#popup4").classList.remove("popup-clicked");
+        popup4 = false;
+        set();
+        event.stopPropagation();
+    }
+});
+
+document.querySelector("#save5").addEventListener('click', function(event) {
+    if (document.querySelector("#name5").value == "" || document.querySelector("#ls5").value == "") {
+        alert("Please fill Shortcut Name and URL/Search before saving.");
+    } else {
+        name5 = document.querySelector("#name5").value;
+        ls5 = document.querySelector("#ls5").value;
+        if (document.querySelector("#link5").checked) {
+            type5 = "link";
+        } else if (document.querySelector("#search5").checked) {
+            type5 = "search";
+        }
+        document.querySelector("#popup5").classList.remove("popup-clicked");
+        popup5 = false;
+        set();
+        event.stopPropagation();
+    }
+});
+
+document.querySelector("#save6").addEventListener('click', function(event) {
+    if (document.querySelector("#name6").value == "" || document.querySelector("#ls6").value == "") {
+        alert("Please fill Shortcut Name and URL/Search before saving.");
+    } else {
+        name6 = document.querySelector("#name6").value;
+        ls6 = document.querySelector("#ls6").value;
+        if (document.querySelector("#link6").checked) {
+            type6 = "link";
+        } else if (document.querySelector("#search6").checked) {
+            type6 = "search";
+        }
+        document.querySelector("#popup6").classList.remove("popup-clicked");
+        popup6 = false;
+        set();
+        event.stopPropagation();
+    }
+});
+
+document.querySelector("#delete1").addEventListener('click', function(event) {
+    name1 = "";
+    ls1 = "";
+    type1 = "link";
+    document.querySelector("#popup1").classList.remove("popup-clicked");
+    popup1 = false;
+    set();
+    event.stopPropagation();
+});
+
+document.querySelector("#delete2").addEventListener('click', function(event) {
+    name2 = "";
+    ls2 = "";
+    type2 = "link";
+    document.querySelector("#popup2").classList.remove("popup-clicked");
+    popup2 = false;
+    set();
+    event.stopPropagation();
+});
+
+document.querySelector("#delete3").addEventListener('click', function(event) {
+    name3 = "";
+    ls3 = "";
+    type3 = "link";
+    document.querySelector("#popup3").classList.remove("popup-clicked");
+    popup3 = false;
+    set();
+    event.stopPropagation();
+});
+
+document.querySelector("#delete4").addEventListener('click', function(event) {
+    name4 = "";
+    ls4 = "";
+    type4 = "link";
+    document.querySelector("#popup4").classList.remove("popup-clicked");
+    popup4 = false;
+    set();
+    event.stopPropagation();
+});
+
+document.querySelector("#delete5").addEventListener('click', function(event) {
+    name5 = "";
+    ls5 = "";
+    type5 = "link";
+    document.querySelector("#popup5").classList.remove("popup-clicked");
+    popup5 = false;
+    set();
+    event.stopPropagation();
+});
+
+document.querySelector("#delete6").addEventListener('click', function(event) {
+    name6 = "";
+    ls6 = "";
+    type6 = "link";
+    document.querySelector("#popup6").classList.remove("popup-clicked");
+    popup6 = false;
+    set();
+    event.stopPropagation();
 });

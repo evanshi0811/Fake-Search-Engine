@@ -10,38 +10,40 @@
 <body>
     <main>
         <div id = "primary-grid">
-            <h1>(Fake) Search Engine</h1>
+            <label for="search">
+                <h1>(Fake) Search Engine</h1>
+            </label>
             <form>
-                <input type = "text" id = "search" name = "search" rows = "1" placeholder = "Search Here"></input>
-                <input id = "search-button" type = "submit" value = "Search">
+                <input type="text" id="search" name="search" placeholder="Search Here">
+                <input id="search-button" type="submit" value="Search">
             </form>
             <div id = "links-grid">
                 <div class = "link-container">
-                    <button class = "link-button" id = "lb1"></button>
-                    <button class = "edit-button" id = "eb1"><img src = "images/editdelete.png" alt = ""></button>
+                    <button class = "link-button" id = "lb1" aria-label="Shortcut 1"></button>
+                    <button class = "edit-button" id = "eb1" aria-label="Edit Shortcut 1"><img src = "images/editdelete.png" alt = ""></button>
                 </div>
                 <div class = "link-container">
-                    <button class = "link-button" id = "lb2"></button>
-                    <button class = "edit-button" id = "eb2"><img src = "images/editdelete.png" alt = ""></button>
+                    <button class = "link-button" id = "lb2" aria-label="Shortcut 2"></button>
+                    <button class = "edit-button" id = "eb2" aria-label="Edit Shortcut 2"><img src = "images/editdelete.png" alt = ""></button>
                 </div>
                 <div class = "link-container">
-                    <button class = "link-button" id = "lb3"></button>
-                    <button class = "edit-button" id = "eb3"><img src = "images/editdelete.png" alt = ""></button>
+                    <button class = "link-button" id = "lb3" aria-label="Shortcut 3"></button>
+                    <button class = "edit-button" id = "eb3" aria-label="Edit Shortcut 3"><img src = "images/editdelete.png" alt = ""></button>
                 </div>
                 <div class = "link-container">
-                    <button class = "link-button" id = "lb4"></button>
-                    <button class = "edit-button" id = "eb4"><img src = "images/editdelete.png" alt = ""></button>
+                    <button class = "link-button" id = "lb4" aria-label="Shortcut 4"></button>
+                    <button class = "edit-button" id = "eb4" aria-label="Edit Shortcut 4"><img src = "images/editdelete.png" alt = ""></button>
                 </div>
                 <div class = "link-container">
-                    <button class = "link-button" id = "lb5"></button>
-                    <button class = "edit-button" id = "eb5"><img src = "images/editdelete.png" alt = ""></button>
+                    <button class = "link-button" id = "lb5" aria-label="Shortcut 5"></button>
+                    <button class = "edit-button" id = "eb5" aria-label="Edit Shortcut 5"><img src = "images/editdelete.png" alt = ""></button>
                 </div>
                 <div class = "link-container">
-                    <button class = "link-button" id = "lb6"></button>
-                    <button class = "edit-button" id = "eb6"><img src = "images/editdelete.png" alt = ""></button>
+                    <button class = "link-button" id = "lb6" aria-label="Shortcut 6"></button>
+                    <button class = "edit-button" id = "eb6" aria-label="Edit Shortcut 6"><img src = "images/editdelete.png" alt = ""></button>
                 </div>
             </div>
-            <form>
+            <form id = "search-form">
                 <h2>Select Search Engine:</h2>
                 <input type = "radio" id = "google" name = "search_engine" value = "Google">
                 <label for = "google">Google</label><br>
@@ -62,7 +64,7 @@
             </form>
         </div>
         <div id = "popup1" class = "popup">
-            <button class = "x" id = "x1"><img src = "images/close-512.webp" alt = ""></button><br>
+            <button class = "x" id = "x1" aria-label="Close Shortcut Edit Window"><img src = "images/close-512.webp" alt = ""></button><br>
             <label for = "name1">Shortcut Name:</label><br>
             <input type = "text" id = "name1" name = "shortcut1" rows = "1"></input><br><br>
             <label for = "ls1">URL/Search:</label><br>
@@ -76,7 +78,7 @@
             <button class = "delete" id = "delete1">Delete</button>
         </div>
         <div id = "popup2" class = "popup">
-            <button class = "x" id = "x2"><img src = "images/close-512.webp" alt = ""></button><br>
+            <button class = "x" id = "x2" aria-label="Close Shortcut Edit Window"><img src = "images/close-512.webp" alt = ""></button><br>
             <label for = "name2">Shortcut Name:</label><br>
             <input type = "text" id = "name2" name = "shortcut2" rows = "1"><br><br>
             <label for = "ls2">URL/Search:</label><br>
@@ -90,7 +92,7 @@
             <button class = "delete" id = "delete2">Delete</button>
         </div>
         <div id = "popup3" class = "popup">
-            <button class = "x" id = "x3"><img src = "images/close-512.webp" alt = ""></button><br>
+            <button class = "x" id = "x3" aria-label="Close Shortcut Edit Window"><img src = "images/close-512.webp" alt = ""></button><br>
             <label for = "name3">Shortcut Name:</label><br>
             <input type = "text" id = "name3" name = "shortcut3" rows = "1"><br><br>
             <label for = "ls3">URL/Search:</label><br>
@@ -104,7 +106,7 @@
             <button class = "delete" id = "delete3">Delete</button>
         </div>
         <div id = "popup4" class = "popup">
-            <button class = "x" id = "x4"><img src = "images/close-512.webp" alt = ""></button><br>
+            <button class = "x" id = "x4" aria-label="Close Shortcut Edit Window"><img src = "images/close-512.webp" alt = ""></button><br>
             <label for = "name4">Shortcut Name:</label><br>
             <input type = "text" id = "name4" name = "shortcut4" rows = "1"><br><br>
             <label for = "ls4">URL/Search:</label><br>
@@ -118,7 +120,7 @@
             <button class = "delete" id = "delete4">Delete</button>
         </div>
         <div id = "popup5" class = "popup">
-            <button class = "x" id = "x5"><img src = "images/close-512.webp" alt = ""></button><br>
+            <button class = "x" id = "x5" aria-label="Close Shortcut Edit Window"><img src = "images/close-512.webp" alt = ""></button><br>
             <label for = "name5">Shortcut Name:</label><br>
             <input type = "text" id = "name5" name = "shortcut5" rows = "1"><br><br>
             <label for = "ls5">URL/Search:</label><br>
@@ -132,7 +134,7 @@
             <button class = "delete" id = "delete5">Delete</button>
         </div>
         <div id = "popup6" class = "popup">
-            <button class = "x" id = "x6"><img src = "images/close-512.webp" alt = ""></button><br>
+            <button class = "x" id = "x6" aria-label="Close Shortcut Edit Window"><img src = "images/close-512.webp" alt = ""></button><br>
             <label for = "name6">Shortcut Name:</label><br>
             <input type = "text" id = "name6" name = "shortcut6" rows = "1"><br><br>
             <label for = "ls6">URL/Search:</label><br>
