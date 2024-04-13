@@ -1,3 +1,15 @@
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: black;
@@ -188,10 +200,4 @@ h3 {
 
 .hidden {
     display: none;
-}
-
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 }
