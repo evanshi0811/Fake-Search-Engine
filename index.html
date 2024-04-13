@@ -1,45 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
     <link rel = "stylesheet" type = "text/css" href = "css/html5reset.css">
     <link rel = "stylesheet" type = "text/css" href = "css/style.css">
     <title>(Fake) Search Engine</title>
 </head>
 <body>
-    <main id = "primary-grid">
-        <h1>(Fake) Search Engine</h1>
-        <form>
-            <input type="text" id="search" name="search" rows="1" placeholder="Search Here"></input>
-            <input id = "search-button" type="submit" value="Search">
-        </form>
-        <form>
-            <h2>Select Search Engine:</h2>
-            <input type="radio" id="google" name="search_engine" value="Google" checked>
-            <label for="google">Google</label><br>
-            <input type="radio" id="bing" name="search_engine" value="Bing">
-            <label for="bing">Bing</label><br>
-            <input type="radio" id="youtube" name="search_engine" value="Youtube">
-            <label for="youtube">Youtube</label><br>
-            <input type="radio" id="yahoo" name="search_engine" value="Yahoo">
-            <label for="yahoo">Yahoo</label><br>
-            <input type="radio" id="yandex" name="search_engine" value="Yandex">
-            <label for="yandex">Yandex</label><br>
-            <input type="radio" id="duckduckgo" name="search_engine" value="DuckDuckGo">
-            <label for="duckduckgo">DuckDuckGo</label><br>
-            <input type="radio" id="baidu" name="search_engine" value="Baidu">
-            <label for="baidu">Baidu</label><br>
-            <input type="radio" id="ecosia" name="search_engine" value="Ecosia">
-            <label for="ecosia">Ecosia</label>
-        </form>
-        <div>
-            <a href=""></a>
-            <button id="editdelete1"  aria-pressed="false">
-                <!--<img src = "images/editdelete.png" alt = "">-->
-            </button>
+    <main>
+        <div id = "primary-grid">
+            <h1>(Fake) Search Engine</h1>
+            <form>
+                <input type = "text" id = "search" name = "search" rows = "1" placeholder = "Search Here"></input>
+                <input id = "search-button" type = "submit" value = "Search">
+            </form>
+            <div id = "links-grid">
+                <div class = "link-container">
+                    <button class = "link-button" id = "lb1"></button>
+                    <button class = "edit-button" id = "eb1"><img src = "images/editdelete.png" alt = ""></button>
+                </div>
+                <div class = "link-container">
+                    <button class = "link-button" id = "lb2"></button>
+                    <button class = "edit-button" id = "eb2"><img src = "images/editdelete.png" alt = ""></button>
+                </div>
+                <div class = "link-container">
+                    <button class = "link-button" id = "lb3"></button>
+                    <button class = "edit-button" id = "eb3"><img src = "images/editdelete.png" alt = ""></button>
+                </div>
+                <div class = "link-container">
+                    <button class = "link-button" id = "lb4"></button>
+                    <button class = "edit-button" id = "eb4"><img src = "images/editdelete.png" alt = ""></button>
+                </div>
+                <div class = "link-container">
+                    <button class = "link-button" id = "lb5"></button>
+                    <button class = "edit-button" id = "eb5"><img src = "images/editdelete.png" alt = ""></button>
+                </div>
+                <div class = "link-container">
+                    <button class = "link-button" id = "lb6"></button>
+                    <button class = "edit-button" id = "eb6"><img src = "images/editdelete.png" alt = ""></button>
+                </div>
+            </div>
+            <form>
+                <h2>Select Search Engine:</h2>
+                <input type = "radio" id = "google" name = "search_engine" value = "Google">
+                <label for = "google">Google</label><br>
+                <input type = "radio" id = "bing" name = "search_engine" value = "Bing">
+                <label for = "bing">Bing</label><br>
+                <input type = "radio" id = "youtube" name = "search_engine" value = "Youtube">
+                <label for = "youtube">Youtube</label><br>
+                <input type = "radio" id = "yahoo" name = "search_engine" value = "Yahoo">
+                <label for = "yahoo">Yahoo</label><br>
+                <input type = "radio" id = "yandex" name = "search_engine" value = "Yandex">
+                <label for = "yandex">Yandex</label><br>
+                <input type = "radio" id = "duckduckgo" name = "search_engine" value = "DuckDuckGo">
+                <label for = "duckduckgo">DuckDuckGo</label><br>
+                <input type = "radio" id = "baidu" name = "search_engine" value = "Baidu">
+                <label for = "baidu">Baidu</label><br>
+                <input type = "radio" id = "ecosia" name = "search_engine" value = "Ecosia">
+                <label for = "ecosia">Ecosia</label>
+            </form>
+        </div>
+        <div id = "popup1" class = "popup">
+            <button class = "x" id = "x1"><img src = "images/close-512.webp" alt = ""></button><br>
+            <label for = "name1">Shortcut Name:</label><br>
+            <input type = "text" id = "name1" name = "shortcut1" rows = "1"></input><br><br>
+            <label for = "ls1">URL/Search:</label><br>
+            <input type = "text" id = "ls1" name = "ls1" rows = "1"></input><br><br>
+            <h3>Shortcut Type:</h3>
+            <input type = "radio" id = "link1" name = "edit1" value = "link">
+            <label for = "link1">URL</label><br>
+            <input type = "radio" id = "search1" name = "edit1" value = "search">
+            <label for = "search1">Search</label><br>
+            <button class = "save" id = "save1">Save</button>
+            <button class = "delete" id = "delete1">Delete</button>
+        </div>
+        <div id = "popup2" class = "popup">
+            <button class = "x" id = "x2"><img src = "images/close-512.webp" alt = ""></button><br>
+            <label for = "name2">Shortcut Name:</label><br>
+            <input type = "text" id = "name2" name = "shortcut2" rows = "1"><br><br>
+            <label for = "ls2">URL/Search:</label><br>
+            <input type = "text" id = "ls2" name = "ls2" rows = "1"><br><br>
+            <h3>Shortcut Type:</h3>
+            <input type = "radio" id = "link2" name = "edit2" value = "link">
+            <label for = "link2">URL</label><br>
+            <input type = "radio" id = "search2" name = "edit2" value = "search">
+            <label for = "search2">Search</label><br>
+            <button class = "save" id = "save2">Save</button>
+            <button class = "delete" id = "delete2">Delete</button>
+        </div>
+        <div id = "popup3" class = "popup">
+            <button class = "x" id = "x3"><img src = "images/close-512.webp" alt = ""></button><br>
+            <label for = "name3">Shortcut Name:</label><br>
+            <input type = "text" id = "name3" name = "shortcut3" rows = "1"><br><br>
+            <label for = "ls3">URL/Search:</label><br>
+            <input type = "text" id = "ls3" name = "ls3" rows = "1"><br><br>
+            <h3>Shortcut Type:</h3>
+            <input type = "radio" id = "link3" name = "edit3" value = "link">
+            <label for = "link3">URL</label><br>
+            <input type = "radio" id = "search3" name = "edit3" value = "search">
+            <label for = "search3">Search</label><br>
+            <button class = "save" id = "save3">Save</button>
+            <button class = "delete" id = "delete3">Delete</button>
+        </div>
+        <div id = "popup4" class = "popup">
+            <button class = "x" id = "x4"><img src = "images/close-512.webp" alt = ""></button><br>
+            <label for = "name4">Shortcut Name:</label><br>
+            <input type = "text" id = "name4" name = "shortcut4" rows = "1"><br><br>
+            <label for = "ls4">URL/Search:</label><br>
+            <input type = "text" id = "ls4" name = "ls4" rows = "1"><br><br>
+            <h3>Shortcut Type:</h3>
+            <input type = "radio" id = "link4" name = "edit4" value = "link">
+            <label for = "link4">URL</label><br>
+            <input type = "radio" id = "search4" name = "edit4" value = "search">
+            <label for = "search4">Search</label><br>
+            <button class = "save" id = "save4">Save</button>
+            <button class = "delete" id = "delete4">Delete</button>
+        </div>
+        <div id = "popup5" class = "popup">
+            <button class = "x" id = "x5"><img src = "images/close-512.webp" alt = ""></button><br>
+            <label for = "name5">Shortcut Name:</label><br>
+            <input type = "text" id = "name5" name = "shortcut5" rows = "1"><br><br>
+            <label for = "ls5">URL/Search:</label><br>
+            <input type = "text" id = "ls5" name = "ls5" rows = "1"><br><br>
+            <h3>Shortcut Type:</h3>
+            <input type = "radio" id = "link5" name = "edit5" value = "link">
+            <label for = "link5">URL</label><br>
+            <input type = "radio" id = "search5" name = "edit5" value = "search">
+            <label for = "search5">Search</label><br>
+            <button class = "save" id = "save5">Save</button>
+            <button class = "delete" id = "delete5">Delete</button>
+        </div>
+        <div id = "popup6" class = "popup">
+            <button class = "x" id = "x6"><img src = "images/close-512.webp" alt = ""></button><br>
+            <label for = "name6">Shortcut Name:</label><br>
+            <input type = "text" id = "name6" name = "shortcut6" rows = "1"><br><br>
+            <label for = "ls6">URL/Search:</label><br>
+            <input type = "text" id = "ls6" name = "ls6" rows = "1"><br><br>
+            <h3>Shortcut Type:</h3>
+            <input type = "radio" id = "link6" name = "edit6" value = "link">
+            <label for = "link6">URL</label><br>
+            <input type = "radio" id = "search6" name = "edit6" value = "search">
+            <label for = "search6">Search</label><br>
+            <button class = "save" id = "save6">Save</button>
+            <button class = "delete" id = "delete6">Delete</button>
         </div>
     </main>
-    <script src="js/script.js"></script>
+    <script src = "js/script.js"></script>
 </body>
 </html>
