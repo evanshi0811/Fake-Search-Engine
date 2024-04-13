@@ -358,7 +358,7 @@ document.querySelector("#search-button").addEventListener("click", function(even
         date3 = date2;
         date2 = date1;
         date1 = Date();
-        setCookies();
+        set();
         window.location.href = url(document.querySelector("#search").value);
     }
 });
@@ -383,7 +383,7 @@ document.querySelector("#search").addEventListener('keypress', function(event) {
             date3 = date2;
             date2 = date1;
             date1 = Date();
-            setCookies();
+            set();
             window.location.href = url(document.querySelector("#search").value);
         }
     }
