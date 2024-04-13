@@ -1,142 +1,415 @@
-/*
-	HTML5 Reset :: style.css
-	https://github.com/murtaugh/HTML5-Reset/blob/master/assets/css/reset.css
-	----------------------------------------------------------
-	We have learned much from/been inspired by/taken code where offered from:
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 
-	Eric Meyer					:: http://meyerweb.com
-	HTML5 Doctor				:: http://html5doctor.com
-	and the HTML5 Boilerplate	:: http://html5boilerplate.com
-
--------------------------------------------------------------------------------*/
-
-/* Let's default this puppy out
--------------------------------------------------------------------------------*/
-
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font-weight: normal;
-	vertical-align: baseline;
-	background: transparent;
-}
-
-main, article, aside, figure, footer, header, nav, section, details, summary {display: block;}
-
-/* Handle box-sizing while better addressing child elements:
-   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-html {
-	box-sizing: border-box;
-}
+/* Reset box-model and set borders */
+/* ============================================ */
 
 *,
-*:before,
-*:after {
-	box-sizing: inherit;
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  min-width: 0;
 }
 
-/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Document */
+/* ============================================ */
 
-/* Responsive images and other embedded objects */
-/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
-img,
-object,
-embed {max-width: 100%;}
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
 
-/*
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-	In fact, it *will* cause problems with Google Maps' controls at small size.
-	If this is the case for you, try uncommenting the following:
-
-#map img {
-		max-width: none;
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
 }
-*/
 
-/* force a vertical scrollbar to prevent a jumpy page */
-html {overflow-y: scroll;}
+/* Sections */
+/* ============================================ */
 
-/* we use a lot of ULs that aren't bulleted.
-	you'll have to restore the bullets within content,
-	which is fine because they're probably customized anyway */
-ul {list-style: none;}
+/**
+ * Remove the margin in all browsers.
+ */
 
-blockquote, q {quotes: none;}
+body {
+  margin: 0;
+}
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {content: ''; content: none;}
+/**
+ * Render the `main` element consistently in IE.
+ */
 
-a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+main {
+  display: block;
+}
 
-del {text-decoration: line-through;}
+/* Vertical rhythm */
+/* ============================================ */
 
-abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
 
-/* tables still need cellspacing="0" in the markup */
-table {border-collapse: separate; border-spacing: 0;}
-th {font-weight: bold; vertical-align: bottom;}
-td {font-weight: normal; vertical-align: top;}
+/* Headings */
+/* ============================================ */
 
-hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
 
-input, select {vertical-align: middle;}
+/* Lists (enumeration) */
+/* ============================================ */
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
 pre {
-    white-space: pre; /* CSS2 */
-    white-space: pre-wrap; /* CSS 2.1 */
-    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word; /* IE */
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
 }
 
-input[type="radio"] {vertical-align: text-bottom;}
-input[type="checkbox"] {vertical-align: bottom;}
-.ie7 input[type="checkbox"] {vertical-align: baseline;}
-.ie6 input {vertical-align: text-bottom;}
+address {
+  font-style: inherit;
+}
 
-select, input, textarea {font: 99% sans-serif;}
+/* Text-level semantics */
+/* ============================================ */
 
-table {font-size: inherit; font: 100%;}
+/**
+ * Remove the gray background on active links in IE 10.
+ */
 
-small {font-size: 85%;}
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
 
-strong {font-weight: bold;}
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
 
-td, td img {vertical-align: top;}
+abbr[title] {
+  text-decoration: underline dotted; /* 2 */
+}
 
-/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
-sub, sup {font-size: 75%; line-height: 0; position: relative;}
-sup {top: -0.5em;}
-sub {bottom: -0.25em;}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 
-/* standardize any monospaced elements */
-pre, code, kbd, samp {font-family: monospace, sans-serif;}
+b,
+strong {
+  font-weight: bolder;
+}
 
-/* hand cursor on clickable elements */
-.clickable,
-label,
-input[type=button],
-input[type=submit],
-input[type=file],
-button {cursor: pointer;}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
-/* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea {margin: 0;}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
 
-/* make buttons play nice in IE */
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+
+/**
+ * Prevent vertical alignment issues.
+ */
+
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+
 button,
-input[type=button] {width: auto; overflow: visible;}
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
 
-/* scale images in IE7 more attractively */
-.ie7 img {-ms-interpolation-mode: bicubic;}
+/**
+ * Correct cursors for clickable elements.
+ */
 
-/* prevent BG image flicker upon hover
-   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
-.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
 */
 
-/* let's clear some floats */
-.clearfix:after { content: " "; display: block; clear: both; }
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
