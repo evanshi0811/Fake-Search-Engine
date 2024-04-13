@@ -11,6 +11,7 @@ button {
     appearance: none;
     color: black;
     background-color: white;
+    border-radius: 8px;
     border: 1px black #000;
 }
 
@@ -126,6 +127,7 @@ h1 {
 img {
     display: block;
     margin: auto auto;
+    width: 100%;
 }
 
 .save {
@@ -207,4 +209,8 @@ h3 {
 
 .hidden {
     display: none;
+}
+
+#name1, #name2, #name3, #name4, #name5, #name6, #ls1, #ls2, #ls3, #ls4, #ls5, #ls6 {
+    width: 100%;
 }
