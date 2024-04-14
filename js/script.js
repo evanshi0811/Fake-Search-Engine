@@ -1668,5 +1668,8 @@ document.querySelector("#clear").addEventListener('click', function() {
     date6 = "";
     date7 = "";
     date8 = "";
+    document.querySelector("#search-form").classList.remove("open-settings");
+    settings = false;
     set();
+    event.stopPropagation();
 });
