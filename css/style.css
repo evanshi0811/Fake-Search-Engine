@@ -1,30 +1,42 @@
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+
+
+input[type="text"] {
     border-radius: 8px;
+    border: 2px solid #111;
+}
+
+input[type = "radio"] {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+input[type="radio"]:checked {
+    background-color: dodgerblue;
 }
 
 button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color: black;
-    background-color: white;
+    color: #111;
+    background-color: #eee;
     border-radius: 8px;
-    border: 1px solid #000;
+    border: 2px solid #111;
     text-align: center;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: black;
+    color: #111;
+    background-color: #fbfbfb;
     font-size: 16px;
 }
 
 h1 {
     font-size: 32px;
     text-align: center;
+    color: #111;
 }
 
 #primary-grid {
@@ -41,6 +53,7 @@ h1 {
     border-radius: 8px;
     text-overflow: ellipsis;
     font-size: 18px;
+    padding-left: 4px;
 }
 
 #search-button {
@@ -49,9 +62,7 @@ h1 {
     display: block;
     border-radius: 8px;
     font-size: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #000;
+    background-color: #eee;
 }
 
 .link-container {
@@ -63,7 +74,9 @@ h1 {
     width: 100px;
     height: 100px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    overflow: hidden;
 }
 
 .edit-button {
@@ -73,19 +86,19 @@ h1 {
     width: 24px;
     height: 24px;
     border-radius: 24px;
-    background-color: #fff;
-    border: 1px #fff solid;
+    background-color: #f7f7f7;
+    border: 2px #f7f7f7 solid;
 }
 
 .edit-button:hover {
-    border: 1px #000 solid;
+    border: 2px #111 solid;
 }
 
 #links-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    width: 320px;
+    width: max(90vw, 320px);
     margin: 20px auto 0 auto;
     row-gap: 10px;
 }
@@ -105,8 +118,8 @@ h1 {
     margin: auto;
     width: 300px;
     height: 275px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    background-color: #f7f7f7;
+    border: 2px solid #111;
     border-radius: 8px;
 }
 
@@ -117,18 +130,18 @@ h1 {
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    background-color: #fff;
-    border: 2px #fff solid;
+    border: 2px #f7f7f7 solid;
+    background-color: #f7f7f7
 }
 
 .x:hover, #x2:hover, #x3:hover, #x4:hover, #x5:hover, #x6:hover {
-    border: 2px #000 solid;
+    border: 2px #111 solid;
 }
 
 img {
     display: block;
     margin: auto auto;
-    width: 100%;
+    width: 75%;
 }
 
 .save {
@@ -137,9 +150,6 @@ img {
     left: 40px;
     width: 100px;
     font-size: 18px;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #000;
 }
 
 .delete {
@@ -148,9 +158,6 @@ img {
     right: 40px;
     width: 100px;
     font-size: 18px;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #000;
 }
 
 #settings-button {
@@ -160,12 +167,12 @@ img {
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background-color: #fff;
-    border: 1px #fff solid;
+    background-color: #fbfbfb;
+    border: 2px #fbfbfb solid;
 }
 
 #settings-button:hover {
-    border: 1px #000 solid;
+    border: 2px #111 solid;
 }
 
 .open-settings {
@@ -179,8 +186,8 @@ img {
     margin: auto;
     width: 300px;
     height: 300px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    background-color: #f7f7f7;
+    border: 2px solid #111;
     border-radius: 8px;
 }
 
@@ -191,9 +198,9 @@ img {
     font-size: 18px;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: #fff;
+    background-color: #f7f7f7;
     border-radius: 8px;
-    border: 1px solid #000;
+    border: 2px solid #111;
 }
 
 h2 {
@@ -205,7 +212,8 @@ h3 {
 }
 
 #history-text {
-    margin: 50px 0 0 5vw;
+    margin: 50px auto 0 auto;
+    width: max(90vw, 320px);
 }
 
 .hidden {
@@ -214,4 +222,254 @@ h3 {
 
 #name1, #name2, #name3, #name4, #name5, #name6, #ls1, #ls2, #ls3, #ls4, #ls5, #ls6 {
     width: 100%;
+    padding-left: 4px;
+    font-size: 16px;
+}
+
+#history-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    width: max(90vw, 320px);
+    margin: 10px auto 0 auto;
+    row-gap: 5px;
+}
+
+#history-grid button {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    margin-top: -2px;
+    background-color: #f7f7f7;
+}
+
+p {
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 750px) {
+    body {
+        font-size: 20px;
+    }
+    #links-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80vw;
+        row-gap: 50px;
+        margin-top: 50px;
+    }
+
+    .link-button {
+        width: 175px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    #search {
+        width: 80vw;
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    #search-button {
+        font-size: 30px;
+        margin-top: 30px;
+        width: 240px;
+    }
+
+    .link-button {
+        font-size: 24px;
+    }
+
+    .edit-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    #primary-grid {
+        margin-top: 200px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #history-grid {
+        grid-template-columns: 200px 1fr;
+        width: 80vw;
+    }
+
+    #history-grid button {
+        font-size: 20px;
+        margin-top: -1px;
+    }
+
+    .popup-clicked {
+        width: 500px;
+        height: 350px;
+        padding: 30px;
+    }
+
+    #name1, #name2, #name3, #name4, #name5, #name6, #ls1, #ls2, #ls3, #ls4, #ls5, #ls6 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+    
+    .save {
+        bottom: 30px;
+        left: 75px;
+        width: 150px;
+        font-size: 24px;
+    }
+    
+    .delete {
+        bottom: 30px;
+        right: 75px;
+        width: 150px;
+        font-size: 24px;
+    }
+
+    #clear {
+        bottom: 35px;
+        width: 200px;
+        font-size: 24px;
+    }
+
+    #settings-button {
+        width: 75px;
+        height: 75px;
+    }
+
+    .open-settings {
+        width: 500px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    #history-text {
+        width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    body {
+        font-size: 20px;
+    }
+    #links-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: min(90vw, 1250px);
+        row-gap: 50px;
+        margin-top: 50px;
+    }
+
+    .link-button {
+        width: 175px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    #search {
+        width: min(80vw, 1250px);
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    #search-button {
+        font-size: 30px;
+        margin-top: 30px;
+        width: 240px;
+    }
+
+    .link-button {
+        font-size: 24px;
+    }
+
+    .edit-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    #primary-grid {
+        margin-top: 200px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #history-grid {
+        grid-template-columns: 200px 1fr;
+        width: min(80vw, 1250px);
+    }
+
+    #history-grid button {
+        font-size: 20px;
+        margin-top: -1px;
+    }
+
+    .popup-clicked {
+        width: 500px;
+        height: 350px;
+        padding: 30px;
+    }
+
+    #name1, #name2, #name3, #name4, #name5, #name6, #ls1, #ls2, #ls3, #ls4, #ls5, #ls6 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+    
+    .save {
+        bottom: 30px;
+        left: 75px;
+        width: 150px;
+        font-size: 24px;
+    }
+    
+    .delete {
+        bottom: 30px;
+        right: 75px;
+        width: 150px;
+        font-size: 24px;
+    }
+
+    #clear {
+        bottom: 35px;
+        width: 200px;
+        font-size: 24px;
+    }
+
+    #settings-button {
+        width: 75px;
+        height: 75px;
+    }
+
+    .open-settings {
+        width: 500px;
+        height: 400px;
+        padding: 30px;
+    }
+
+    #history-text {
+        width: min(80vw, 1250px);
+        margin-top: 100px;
+    }
 }
