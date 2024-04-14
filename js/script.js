@@ -34,6 +34,14 @@ let date5 = "";
 let date6 = "";
 let date7 = "";
 let date8 = "";
+let histtype1 = "link";
+let histtype2 = "link";
+let histtype3 = "link";
+let histtype4 = "link";
+let histtype5 = "link";
+let histtype6 = "link";
+let histtype7 = "link";
+let histtype8 = "link";
 let settings = false;
 let popup1 = false;
 let popup2 = false;
@@ -78,6 +86,14 @@ if (document.cookie != "") {
     date6 = getCookie("date6");
     date7 = getCookie("date7");
     date8 = getCookie("date8");
+    histtype1 = getCookie("histtype1");
+    histtype2 = getCookie("histtype2");
+    histtype3 = getCookie("histtype3");
+    histtype4 = getCookie("histtype4");
+    histtype5 = getCookie("histtype5");
+    histtype6 = getCookie("histtype6");
+    histtype7 = getCookie("histtype7");
+    histtype8 = getCookie("histtype8");
 }
 
 function setCookie(name, value, days) {
@@ -140,6 +156,14 @@ function setCookies() {
     setCookie("date6", date6, 30);
     setCookie("date7", date7, 30);
     setCookie("date8", date8, 30);
+    setCookie("histtype1", histtype1, 30);
+    setCookie("histtype2", histtype2, 30);
+    setCookie("histtype3", histtype3, 30);
+    setCookie("histtype4", histtype4, 30);
+    setCookie("histtype5", histtype5, 30);
+    setCookie("histtype6", histtype6, 30);
+    setCookie("histtype7", histtype7, 30);
+    setCookie("histtype8", histtype8, 30);
 }
 
 
@@ -224,15 +248,6 @@ function set() {
         document.querySelector("#time1").innerHTML = date1.substring(4, 21) + ":";
         document.querySelector("#h1").innerHTML = history1;
     }
-    if (history1 == "") {
-        document.querySelector("#time1").classList.add("hidden");
-        document.querySelector("#h1").classList.add("hidden");
-    } else {
-        document.querySelector("#time1").classList.remove("hidden");
-        document.querySelector("#h1").classList.remove("hidden");
-        document.querySelector("#time1").innerHTML = date1.substring(4, 21) + ":";
-        document.querySelector("#h1").innerHTML = history1;
-    }
     if (history2 == "") {
         document.querySelector("#time2").classList.add("hidden");
         document.querySelector("#h2").classList.add("hidden");
@@ -301,37 +316,37 @@ function set() {
 
 function emptycheck() {
     if (name1 == "") {
-        document.querySelector("#lb1").innerHTML = "Empty";
+        document.querySelector("#lb1").innerHTML = "Click to Add Shortcut";
         document.querySelector("#lb1").style.fontStyle = "italic";
     } else {
         document.querySelector("#lb1").style.fontStyle = "normal";
     }
     if (name2 == "") {
-        document.querySelector("#lb2").innerHTML = "Empty";
+        document.querySelector("#lb2").innerHTML = "Click to Add Shortcut";
         document.querySelector("#lb2").style.fontStyle = "italic";
     } else {
         document.querySelector("#lb2").style.fontStyle = "normal";
     }
     if (name3 == "") {
-        document.querySelector("#lb3").innerHTML = "Empty";
+        document.querySelector("#lb3").innerHTML = "Click to Add Shortcut";
         document.querySelector("#lb3").style.fontStyle = "italic";
     } else {
         document.querySelector("#lb3").style.fontStyle = "normal";
     }
     if (name4 == "") {
-        document.querySelector("#lb4").innerHTML = "Empty";
+        document.querySelector("#lb4").innerHTML = "Click to Add Shortcut";
         document.querySelector("#lb4").style.fontStyle = "italic";
     } else {
         document.querySelector("#lb4").style.fontStyle = "normal";
     }
     if (name5 == "") {
-        document.querySelector("#lb5").innerHTML = "Empty";
+        document.querySelector("#lb5").innerHTML = "Click to Add Shortcut";
         document.querySelector("#lb5").style.fontStyle = "italic";
     } else {
         document.querySelector("#lb5").style.fontStyle = "normal";
     }
     if (name6 == "") {
-        document.querySelector("#lb6").innerHTML = "Empty";
+        document.querySelector("#lb6").innerHTML = "Click to Add Shortcut";
         document.querySelector("#lb6").style.fontStyle = "italic";
     } else {
         document.querySelector("#lb6").style.fontStyle = "normal";
@@ -358,6 +373,14 @@ document.querySelector("#search-button").addEventListener("click", function(even
         date3 = date2;
         date2 = date1;
         date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
         set();
         window.location.href = url(document.querySelector("#search").value);
     }
@@ -383,6 +406,14 @@ document.querySelector("#search").addEventListener('keypress', function(event) {
             date3 = date2;
             date2 = date1;
             date1 = Date();
+            histtype8 = histtype7;
+            histtype7 = histtype6;
+            histtype6 = histtype5;
+            histtype5 = histtype4;
+            histtype4 = histtype3;
+            histtype3 = histtype2;
+            histtype2 = histtype1;
+            histtype1 = "search";
             set();
             window.location.href = url(document.querySelector("#search").value);
         }
@@ -391,27 +422,483 @@ document.querySelector("#search").addEventListener('keypress', function(event) {
 
 document.querySelector("#h1").addEventListener("click", function(event) {
     event.preventDefault();
-    window.location.href = url(history1);
+    if (histtype1 == "link") {
+        let temp = history1;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype1 == "search") {
+        let temp = history1;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
 });
 document.querySelector("#h2").addEventListener("click", function(event) {
     event.preventDefault();
-    window.location.href = url(history2);
+    if (histtype2 == "link") {
+        let temp = history2;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype2 == "search") {
+        let temp = history2;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
 });
 document.querySelector("#h3").addEventListener("click", function(event) {
     event.preventDefault();
-    window.location.href = url(history3);
+    if (histtype3 == "link") {
+        let temp = history3;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype3 == "search") {
+        let temp = history3;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
 });
 document.querySelector("#h4").addEventListener("click", function(event) {
     event.preventDefault();
-    window.location.href = url(history4);
+    if (histtype4 == "link") {
+        let temp = history4;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype4 == "search") {
+        let temp = history4;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
 });
 document.querySelector("#h5").addEventListener("click", function(event) {
     event.preventDefault();
-    window.location.href = url(history5);
+    if (histtype5 == "link") {
+        let temp = history5;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype5 == "search") {
+        let temp = history5;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
 });
 document.querySelector("#h6").addEventListener("click", function(event) {
     event.preventDefault();
-    window.location.href = url(history6);
+    if (histtype6 == "link") {
+        let temp = history6;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype6 == "search") {
+        let temp = history6;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
+});
+document.querySelector("#h7").addEventListener("click", function(event) {
+    event.preventDefault();
+    if (histtype7 == "link") {
+        let temp = history7;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype7 == "search") {
+        let temp = history7;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
+});
+document.querySelector("#h8").addEventListener("click", function(event) {
+    event.preventDefault();
+    if (histtype8 == "link") {
+        let temp = history8;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "link";
+        set();
+        window.location.href = temp;
+    } else if (histtype8 == "search") {
+        let temp = history8;
+        history8 = history7;
+        history7 = history6;
+        history6 = history5;
+        history5 = history4;
+        history4 = history3;
+        history3 = history2;
+        history2 = history1;
+        history1 = temp;
+        date8 = date7;
+        date7 = date6;
+        date6 = date5;
+        date5 = date4;
+        date4 = date3;
+        date3 = date2;
+        date2 = date1;
+        date1 = Date();
+        histtype8 = histtype7;
+        histtype7 = histtype6;
+        histtype6 = histtype5;
+        histtype5 = histtype4;
+        histtype4 = histtype3;
+        histtype3 = histtype2;
+        histtype2 = histtype1;
+        histtype1 = "search";
+        set();
+        window.location.href = url(temp);
+    }
 });
 
 function url(search) {
@@ -603,11 +1090,63 @@ document.querySelector("#x6").addEventListener('click', function(event) {
 document.querySelector("#lb1").addEventListener('click', function(event) {
     if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
         if (ls1 == "") {
-            event.preventDefault();
+            document.querySelector("#popup1").classList.add("popup-clicked");
+            popup1 = true;
+            event.stopPropagation();
         } else {
             if (type1 == "link") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls1;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "link";
+                set();
                 window.location.href = ls1;
             } else if (type1 == "search") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls1;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "search";
+                set();
                 window.location.href = url(ls1);
             }
         }
@@ -617,11 +1156,63 @@ document.querySelector("#lb1").addEventListener('click', function(event) {
 document.querySelector("#lb2").addEventListener('click', function(event) {
     if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
         if (ls2 == "") {
-            event.preventDefault();
+            document.querySelector("#popup2").classList.add("popup-clicked");
+            popup2 = true;
+            event.stopPropagation();
         } else {
             if (type2 == "link") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls2;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "link";
+                set();
                 window.location.href = ls2;
             } else if (type2 == "search") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls2;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "search";
+                set();
                 window.location.href = url(ls2);
             }
         }
@@ -631,11 +1222,63 @@ document.querySelector("#lb2").addEventListener('click', function(event) {
 document.querySelector("#lb3").addEventListener('click', function(event) {
     if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
         if (ls3 == "") {
-            event.preventDefault();
+            document.querySelector("#popup3").classList.add("popup-clicked");
+            popup3 = true;
+            event.stopPropagation();
         } else {
             if (type3 == "link") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls3;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "link";
+                set();
                 window.location.href = ls3;
             } else if (type3 == "search") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls3;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "search";
+                set();
                 window.location.href = url(ls3);
             }
         }
@@ -645,11 +1288,63 @@ document.querySelector("#lb3").addEventListener('click', function(event) {
 document.querySelector("#lb4").addEventListener('click', function(event) {
     if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
         if (ls4 == "") {
-            event.preventDefault();
+            document.querySelector("#popup4").classList.add("popup-clicked");
+            popup4 = true;
+            event.stopPropagation();
         } else {
             if (type4 == "link") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls4;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "link";
+                set();
                 window.location.href = ls4;
             } else if (type4 == "search") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls4;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "search";
+                set();
                 window.location.href = url(ls4);
             }
         }
@@ -659,11 +1354,63 @@ document.querySelector("#lb4").addEventListener('click', function(event) {
 document.querySelector("#lb5").addEventListener('click', function(event) {
     if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
         if (ls5 == "") {
-            event.preventDefault();
+            document.querySelector("#popup5").classList.add("popup-clicked");
+            popup5 = true;
+            event.stopPropagation();
         } else {
             if (type5 == "link") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls5;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "link";
+                set();
                 window.location.href = ls5;
             } else if (type5 == "search") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls5;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "search";
+                set();
                 window.location.href = url(ls5);
             }
         }
@@ -673,11 +1420,63 @@ document.querySelector("#lb5").addEventListener('click', function(event) {
 document.querySelector("#lb6").addEventListener('click', function(event) {
     if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
         if (ls6 == "") {
-            event.preventDefault();
+            document.querySelector("#popup6").classList.add("popup-clicked");
+            popup6 = true;
+            event.stopPropagation();
         } else {
             if (type6 == "link") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls6;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "link";
+                set();
                 window.location.href = ls6;
             } else if (type6 == "search") {
+                history8 = history7;
+                history7 = history6;
+                history6 = history5;
+                history5 = history4;
+                history4 = history3;
+                history3 = history2;
+                history2 = history1;
+                history1 = ls6;
+                date8 = date7;
+                date7 = date6;
+                date6 = date5;
+                date5 = date4;
+                date4 = date3;
+                date3 = date2;
+                date2 = date1;
+                date1 = Date();
+                histtype8 = histtype7;
+                histtype7 = histtype6;
+                histtype6 = histtype5;
+                histtype5 = histtype4;
+                histtype4 = histtype3;
+                histtype3 = histtype2;
+                histtype2 = histtype1;
+                histtype1 = "search";
+                set();
                 window.location.href = url(ls6);
             }
         }
