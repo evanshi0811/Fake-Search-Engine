@@ -455,9 +455,11 @@ document.querySelector("#search-form").addEventListener('change', function() {
 });
 
 document.querySelector("#settings-button").addEventListener('click', function(event) {
-    document.querySelector("#search-form").classList.add("open-settings");
-    settings = true;
-    event.stopPropagation();
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        document.querySelector("#search-form").classList.add("open-settings");
+        settings = true;
+        event.stopPropagation();
+    }
 });
 
 document.querySelector("#settingx").addEventListener('click', function(event) {
@@ -468,7 +470,7 @@ document.querySelector("#settingx").addEventListener('click', function(event) {
 });
 
 //Shortcut Stuff
-window.addEventListener('click', function(event) {
+window.addEventListener("click", function(event) {
     if (!document.querySelector("#popup1").contains(event.target) && popup1) {
         event.preventDefault();
         document.querySelector("#popup1").classList.remove("popup-clicked");
@@ -508,9 +510,11 @@ window.addEventListener('click', function(event) {
 });
 
 document.querySelector("#eb1").addEventListener('click', function(event) {
-    document.querySelector("#popup1").classList.add("popup-clicked");
-    popup1 = true;
-    event.stopPropagation();
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        document.querySelector("#popup1").classList.add("popup-clicked");
+        popup1 = true;
+        event.stopPropagation();
+    }
 });
 
 document.querySelector("#x1").addEventListener('click', function(event) {
@@ -521,9 +525,11 @@ document.querySelector("#x1").addEventListener('click', function(event) {
 });
 
 document.querySelector("#eb2").addEventListener('click', function(event) {
-    document.querySelector("#popup2").classList.add("popup-clicked");
-    popup2 = true;
-    event.stopPropagation();
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        document.querySelector("#popup2").classList.add("popup-clicked");
+        popup2 = true;
+        event.stopPropagation();
+    }
 });
 
 document.querySelector("#x2").addEventListener('click', function(event) {
@@ -534,9 +540,11 @@ document.querySelector("#x2").addEventListener('click', function(event) {
 });
 
 document.querySelector("#eb3").addEventListener('click', function(event) {
-    document.querySelector("#popup3").classList.add("popup-clicked");
-    popup3 = true;
-    event.stopPropagation();
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        document.querySelector("#popup3").classList.add("popup-clicked");
+        popup3 = true;
+        event.stopPropagation();
+    }
 });
 
 document.querySelector("#x3").addEventListener('click', function(event) {
@@ -547,9 +555,11 @@ document.querySelector("#x3").addEventListener('click', function(event) {
 });
 
 document.querySelector("#eb4").addEventListener('click', function(event) {
-    document.querySelector("#popup4").classList.add("popup-clicked");
-    popup4 = true;
-    event.stopPropagation();
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        document.querySelector("#popup4").classList.add("popup-clicked");
+        popup4 = true;
+        event.stopPropagation();
+    }
 });
 
 document.querySelector("#x4").addEventListener('click', function(event) {
@@ -560,9 +570,11 @@ document.querySelector("#x4").addEventListener('click', function(event) {
 });
 
 document.querySelector("#eb5").addEventListener('click', function(event) {
-    document.querySelector("#popup5").classList.add("popup-clicked");
-    popup5 = true;
-    event.stopPropagation();
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        document.querySelector("#popup5").classList.add("popup-clicked");
+        popup5 = true;
+        event.stopPropagation();
+    }
 });
 
 document.querySelector("#x5").addEventListener('click', function(event) {
@@ -573,9 +585,11 @@ document.querySelector("#x5").addEventListener('click', function(event) {
 });
 
 document.querySelector("#eb6").addEventListener('click', function(event) {
-    document.querySelector("#popup6").classList.add("popup-clicked");
-    popup6 = true;
-    event.stopPropagation();
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        document.querySelector("#popup6").classList.add("popup-clicked");
+        popup6 = true;
+        event.stopPropagation();
+    }
 });
 
 document.querySelector("#x6").addEventListener('click', function(event) {
@@ -587,73 +601,85 @@ document.querySelector("#x6").addEventListener('click', function(event) {
 
 
 document.querySelector("#lb1").addEventListener('click', function(event) {
-    if (ls1 == "") {
-        event.preventDefault();
-    } else {
-        if (type1 == "link") {
-            window.location.href = ls1;
-        } else if (type1 == "search") {
-            window.location.href = url(ls1);
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        if (ls1 == "") {
+            event.preventDefault();
+        } else {
+            if (type1 == "link") {
+                window.location.href = ls1;
+            } else if (type1 == "search") {
+                window.location.href = url(ls1);
+            }
         }
     }
 });
 
 document.querySelector("#lb2").addEventListener('click', function(event) {
-    if (ls2 == "") {
-        event.preventDefault();
-    } else {
-        if (type2 == "link") {
-            window.location.href = ls2;
-        } else if (type2 == "search") {
-            window.location.href = url(ls2);
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        if (ls2 == "") {
+            event.preventDefault();
+        } else {
+            if (type2 == "link") {
+                window.location.href = ls2;
+            } else if (type2 == "search") {
+                window.location.href = url(ls2);
+            }
         }
     }
 });
 
 document.querySelector("#lb3").addEventListener('click', function(event) {
-    if (ls3 == "") {
-        event.preventDefault();
-    } else {
-        if (type3 == "link") {
-            window.location.href = ls3;
-        } else if (type3 == "search") {
-            window.location.href = url(ls3);
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        if (ls3 == "") {
+            event.preventDefault();
+        } else {
+            if (type3 == "link") {
+                window.location.href = ls3;
+            } else if (type3 == "search") {
+                window.location.href = url(ls3);
+            }
         }
     }
 });
 
 document.querySelector("#lb4").addEventListener('click', function(event) {
-    if (ls4 == "") {
-        event.preventDefault();
-    } else {
-        if (type4 == "link") {
-            window.location.href = ls4;
-        } else if (type4 == "search") {
-            window.location.href = url(ls4);
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        if (ls4 == "") {
+            event.preventDefault();
+        } else {
+            if (type4 == "link") {
+                window.location.href = ls4;
+            } else if (type4 == "search") {
+                window.location.href = url(ls4);
+            }
         }
     }
 });
 
 document.querySelector("#lb5").addEventListener('click', function(event) {
-    if (ls5 == "") {
-        event.preventDefault();
-    } else {
-        if (type5 == "link") {
-            window.location.href = ls5;
-        } else if (type5 == "search") {
-            window.location.href = url(ls5);
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        if (ls5 == "") {
+            event.preventDefault();
+        } else {
+            if (type5 == "link") {
+                window.location.href = ls5;
+            } else if (type5 == "search") {
+                window.location.href = url(ls5);
+            }
         }
     }
 });
 
 document.querySelector("#lb6").addEventListener('click', function(event) {
-    if (ls6 == "") {
-        event.preventDefault();
-    } else {
-        if (type6 == "link") {
-            window.location.href = ls6;
-        } else if (type6 == "search") {
-            window.location.href = url(ls6);
+    if (!(popup1 || popup2 || popup3 || popup4 || popup5 || popup6 || settings)) {
+        if (ls6 == "") {
+            event.preventDefault();
+        } else {
+            if (type6 == "link") {
+                window.location.href = ls6;
+            } else if (type6 == "search") {
+                window.location.href = url(ls6);
+            }
         }
     }
 });
