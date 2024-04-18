@@ -382,7 +382,7 @@ document.querySelector("#search-button").addEventListener("click", function(even
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(document.querySelector("#search").value);
     }
 });
@@ -415,7 +415,7 @@ document.querySelector("#search").addEventListener('keypress', function(event) {
             histtype3 = histtype2;
             histtype2 = histtype1;
             histtype1 = "search";
-            set();
+            setCookies();
             window.location.href = url(document.querySelector("#search").value);
         }
     }
@@ -449,7 +449,7 @@ document.querySelector("#h1").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype1 == "search") {
         let temp = history1;
@@ -477,7 +477,7 @@ document.querySelector("#h1").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -509,7 +509,7 @@ document.querySelector("#h2").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype2 == "search") {
         let temp = history2;
@@ -537,7 +537,7 @@ document.querySelector("#h2").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -569,7 +569,7 @@ document.querySelector("#h3").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype3 == "search") {
         let temp = history3;
@@ -597,7 +597,7 @@ document.querySelector("#h3").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -629,7 +629,7 @@ document.querySelector("#h4").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype4 == "search") {
         let temp = history4;
@@ -657,7 +657,7 @@ document.querySelector("#h4").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -689,7 +689,7 @@ document.querySelector("#h5").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype5 == "search") {
         let temp = history5;
@@ -717,7 +717,7 @@ document.querySelector("#h5").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -749,7 +749,7 @@ document.querySelector("#h6").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype6 == "search") {
         let temp = history6;
@@ -777,7 +777,7 @@ document.querySelector("#h6").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -809,7 +809,7 @@ document.querySelector("#h7").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype7 == "search") {
         let temp = history7;
@@ -837,7 +837,7 @@ document.querySelector("#h7").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -869,7 +869,7 @@ document.querySelector("#h8").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "link";
-        set();
+        setCookies();
         window.location.href = temp;
     } else if (histtype8 == "search") {
         let temp = history8;
@@ -897,7 +897,7 @@ document.querySelector("#h8").addEventListener("click", function(event) {
         histtype3 = histtype2;
         histtype2 = histtype1;
         histtype1 = "search";
-        set();
+        setCookies();
         window.location.href = url(temp);
     }
 });
@@ -1120,7 +1120,7 @@ document.querySelector("#lb1").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "link";
-                set();
+                setCookies();
                 window.location.href = ls1;
             } else if (type1 == "search") {
                 history8 = history7;
@@ -1147,7 +1147,7 @@ document.querySelector("#lb1").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "search";
-                set();
+                setCookies();
                 window.location.href = url(ls1);
             }
         }
@@ -1186,7 +1186,7 @@ document.querySelector("#lb2").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "link";
-                set();
+                setCookies();
                 window.location.href = ls2;
             } else if (type2 == "search") {
                 history8 = history7;
@@ -1213,7 +1213,7 @@ document.querySelector("#lb2").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "search";
-                set();
+                setCookies();
                 window.location.href = url(ls2);
             }
         }
@@ -1252,7 +1252,7 @@ document.querySelector("#lb3").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "link";
-                set();
+                setCookies();
                 window.location.href = ls3;
             } else if (type3 == "search") {
                 history8 = history7;
@@ -1279,7 +1279,7 @@ document.querySelector("#lb3").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "search";
-                set();
+                setCookies();
                 window.location.href = url(ls3);
             }
         }
@@ -1318,7 +1318,7 @@ document.querySelector("#lb4").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "link";
-                set();
+                setCookies();
                 window.location.href = ls4;
             } else if (type4 == "search") {
                 history8 = history7;
@@ -1345,7 +1345,7 @@ document.querySelector("#lb4").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "search";
-                set();
+                setCookies();
                 window.location.href = url(ls4);
             }
         }
@@ -1384,7 +1384,7 @@ document.querySelector("#lb5").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "link";
-                set();
+                setCookies();
                 window.location.href = ls5;
             } else if (type5 == "search") {
                 history8 = history7;
@@ -1411,7 +1411,7 @@ document.querySelector("#lb5").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "search";
-                set();
+                setCookies();
                 window.location.href = url(ls5);
             }
         }
@@ -1450,7 +1450,7 @@ document.querySelector("#lb6").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "link";
-                set();
+                setCookies();
                 window.location.href = ls6;
             } else if (type6 == "search") {
                 history8 = history7;
@@ -1477,7 +1477,7 @@ document.querySelector("#lb6").addEventListener('click', function(event) {
                 histtype3 = histtype2;
                 histtype2 = histtype1;
                 histtype1 = "search";
-                set();
+                setCookies();
                 window.location.href = url(ls6);
             }
         }
