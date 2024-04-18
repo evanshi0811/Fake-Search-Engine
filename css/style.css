@@ -60,6 +60,10 @@ h1 {
     padding-bottom: 6px;
 }
 
+#search:focus {
+    outline: none;
+}
+
 #search-button {
     width: 150px;
     margin: 10px auto 0 auto;
