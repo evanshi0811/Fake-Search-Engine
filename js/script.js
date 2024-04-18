@@ -188,6 +188,7 @@ function set() {
     } else if (search_engine == "Ecosia") {
         document.querySelector("#ecosia").checked = true;
     }
+    document.querySelector("#search").placeholder = "Search with " + search_engine;
     document.querySelector("#lb1").innerHTML = name1;
     document.querySelector("#lb2").innerHTML = name2;
     document.querySelector("#lb3").innerHTML = name3;
