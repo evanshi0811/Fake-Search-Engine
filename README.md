@@ -1,5 +1,5 @@
 
-![Banner](./images/Banner.png)
+![Banner image of (Fake) Search Engine](./images/Banner.png)
 
 
 # (Fake) Search Engine
@@ -30,7 +30,7 @@ The search engine used can be modified in settings.
 
 #### Example
 
-![Search Demo](./images/Search.gif)
+![Animated GIF demonstrating searching with Google and Ecosia through (Fake) Search Engine](./images/Search.gif)
 
 ### Shortcuts
 
@@ -40,9 +40,9 @@ Additionally, each shortcut can be modified by clicking the 3 dots on the top ri
 
 #### Examples
 
-![URL Demo](./images/URL.gif)
+![Animated GIF demonstrating setting a URL shortcut and using it](./images/URL.gif)
 
-![Query Demo](./images/Query.gif)
+![Animated GIF demonstrating setting a search query shortcut and using it](./images/Query.gif)
 
 ### Search History
 
@@ -52,7 +52,7 @@ You can clear the history in settings.
 
 #### Example
 
-![History Demo](./images/History.gif)
+![Animated GIF demonstrating the history updating after a new search and clearing the history](./images/History.gif)
 
 ## Cookies
 
@@ -60,7 +60,7 @@ Cookies are used to store the search engine preference, shortcuts, and search hi
 
 ### Diagram
 
-![Cookie Diagram](./images/Diagram.png)
+![Call diagram indiating interactions between the user, window, and cookie during specific actions](./images/Diagram.png)
 ## FAQ
 
 #### Is the code for (Fake) Search Engine publicly available?
@@ -87,12 +87,12 @@ Currently, (Fake) Search Engine is confirmed to be fully functional on Google Ch
 
 Mobile View:
 
-![Mobile View](./images/Mobile.png)
+![(Fake) Search Engine Mobile View](./images/Mobile.png)
 
 Tablet View:
 
-![Tablet View](./images/Tablet.png)
+![(Fake) Search Engine Tablet View](./images/Tablet.png)
 
 Laptop/Desktop View:
 
-![Laptop View](./images/Laptop.png)
+![(Fake) Search Engine Laptop View](./images/Laptop.png)
