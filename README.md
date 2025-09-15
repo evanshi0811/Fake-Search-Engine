@@ -86,10 +86,13 @@ Currently, (Fake) Search Engine is confirmed to be fully functional on Google Ch
 (Fake) Search Engine is designed to work for mobile, tablet, laptop and desktop devices.
 
 Mobile View:
+
 ![Mobile View](./images/Mobile.png)
 
 Tablet View:
+
 ![Tablet View](./images/Tablet.png)
 
 Laptop/Desktop View:
+
 ![Laptop View](./images/Laptop.png)
