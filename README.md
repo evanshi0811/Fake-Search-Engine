@@ -60,7 +60,7 @@ Cookies are used to store the search engine preference, shortcuts, and search hi
 
 ### Diagram
 
-![Cookie Diagram](https://img.plantuml.biz/plantuml/png/lPJ1IyCm5CRlXVuFxxWTTFT1PT0f7XJ5CRnu2SbR6vOc9Nbn-D-RBWckeqvGy5H8tlVn-xuNkdB4BFbEbKLPa2I5CBjZUvp31fdbBTpgHcg4sfYz31-c5AmbQoph1WNZP2ni7Tgow8EHvB9dck1LQc4EuxDeCQYg2fvPW_1Wc82gAel10AvkacmPB_emKXRnQBYC-YNKBV8z2CDzXvgkUR9DX2SkBqZUQeW3yCwKHtTgcEUslM24i7vwX8EaTYo0DpqBU21mnxoYV2ftPsFC8cX3q5jq0MkUSwBT6TkbDXUrae5zqnfBtDDazgnmKS6F2fSKKtqa_BD2e9KkxEOZybsentdEqRcTL-2ZKtWIv4TD3Oo3G4YBd81CfijSu2JbrIQUz7usI2HrunONGoTDT0sVfFb5xB755s1U_xSznF3YZyybTL2hW94hk4-Rc0eU1nDqMjbKsZKg_6d9_vDkXLeS_nUV)
+![Cookie Diagram](./images/Diagram.png)
 ## FAQ
 
 #### Is the code for (Fake) Search Engine publicly available?
