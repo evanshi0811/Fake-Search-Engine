@@ -1,10 +1,9 @@
-
 ![Banner image of (Fake) Search Engine](./images/Banner.png)
 
 
 # (Fake) Search Engine
 
-Welcome to (Fake) Search Engine, a simple website that allows anyone to endlessly and uniquely customize their search experience!
+Welcome to (Fake) Search Engine, a simple website that allows anyone to endlessly and uniquely customize their search experience! If you've ever noticed other search engines getting bogged down with ads and other "features" that are ruining your search experience, this website is perfect for you! Not only does it have all of the features other search engines have with none of the distractions, but you also get to customize your search experience by picking which website you want to end up searching on!
 
 Disclaimer: This website was created as a final project for SI 339.
 ## Table of Contents
@@ -63,36 +62,30 @@ Cookies are used to store the search engine preference, shortcuts, and search hi
 ![Call diagram indiating interactions between the user, window, and cookie during specific actions](./images/Diagram.png)
 ## FAQ
 
-#### Is the code for (Fake) Search Engine publicly available?
+### Is the code for (Fake) Search Engine publicly available?
+Yes, the code is available here: https://github.com/evanshi0811/Fake-Search-Engine
 
-Yes, the code for the website is available here: https://github.com/evanshi0811/Fake-Search-Engine
 
-#### Is any future development planned for (Fake) Search Engine?
-
+### Is any future development planned for (Fake) Search Engine?
 No, there is not currently any future development planned.
 
-#### Will any of my search information be stored?
 
-Search information will only be stored on your local web browser. Only the most recent 8 seraches will be stored and can be deleted in settings.
+### Will any of my search information be stored?
+Search information will only be stored on your local browser…
 
-The code is available for inspection if you would like to manually confirm that no information is stored elsewhere.
 
-#### Will (Fake) Search Engine work on all web browsers?
+### Will (Fake) Search Engine work on all web browsers?
+Currently confirmed on Chrome and Safari…
 
-Currently, (Fake) Search Engine is confirmed to be fully functional on Google Chrome and Safari. However, although other web browsers have not been thoroughly tested, they should all still be fully functional.
 
-#### Does (Fake) Search Engine work on all devices?
+### Does (Fake) Search Engine work on all devices?
+(Fake) Search Engine is designed for all device sizes.
 
-(Fake) Search Engine is designed to work for mobile, tablet, laptop and desktop devices.
+**Mobile:**  
+![](./images/Mobile.png)
 
-Mobile View:
+**Tablet:**  
+![](./images/Tablet.png)
 
-![(Fake) Search Engine Mobile View](./images/Mobile.png)
-
-Tablet View:
-
-![(Fake) Search Engine Tablet View](./images/Tablet.png)
-
-Laptop/Desktop View:
-
-![(Fake) Search Engine Laptop View](./images/Laptop.png)
+**Laptop/Desktop:**  
+![](./images/Laptop.png)
